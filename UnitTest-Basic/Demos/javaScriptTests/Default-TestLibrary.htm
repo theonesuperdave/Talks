@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>QUnit example for sample test JS library</title>
+    <link rel="stylesheet" href="scripts/qunit-1.12.0.css" />
+</head>
+<body>
+    <div id="qunit">
+    </div>
+    <div id="qunit-fixture">
+    </div>
+    <script type="text/javascript" src="scripts/qunit-1.12.0.js"></script>
+    <script type="text/javascript" src="scripts/sampleLibrary-1.0.0.js"></script>
+    <script type="text/javascript">
+
+        module("Sample Library"); // Define a group label
+
+        test("Let's Give it a spin, shall we?", function () {
+            var value = window.testLibrary.returnTrue();
+            equal(value, true, "We expect value to be 'true'");
+        });
+
+        test("I wonder if we can get to this function?", function () {
+            var value = returnFalse();
+            equal(value, false, "We expect value to be 'false'");
+        });
+
+//        test("blah", function () {
+//            ok(true);
+//        });
+
+    </script>
+</body>
+</html>
